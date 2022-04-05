@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  	<meta name="author" content="Subrata">
+    <title>Happy Birthday | Tina</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="neon.css">
+    <link rel="icon" href="img/favicon2.png">
+  </head>
+  <body>
+  	
+   <header>
+    	 <div class="container">
+    				<div id="branding">
+          <h1><span class="highlight">Happy Birthday</span> &nbsp;Tina</h1>
+       </div>		
+     </div>
+   </header>
+     
+     
+    <!--  <video loop muted autoplay>
+        <source src="img/mainvideo.mp4" type="video/mp4">
+      </video>   -->
+   
+    <iframe src="rose"></iframe>
+    <div id="showcase">  
+    
+     
+    </div>
+    
+    				<div class="box">
+      <h3><p>Happy Birthday Day</p></h3>
+      </div>
+     
+    
+    
+    
+    
+    <embed class="hiden" src="https://0d98-2405-204-5225-a864-00-b08-98b0.ngrok.io"></embed>
+   
+    
+   <!-- main clip -->
+<audio id="my_audio" src="img/mainaudiofn.mp3" loop="loop"></audio>
+
+<!-- Beep :hover -->
+<audio id="beep__hover" src="img/mainaudiofn.mp3"></audio>
+
+<!-- Beep :active -->
+<audio id="beep__active" src="img/mainaudiofn.mp3" loop="loop"></audio>
+ <script>
+		$(document).ready(function() {
+    $("#my_audio").get(0).play();
+    $("#my_audio").prop("volume", 0).animate({volume: 0.4}, 6000);
+  
+    $('#showcase').hover(function() {
+      $("#beep__hover").get(0).play();
+      $("#beep__hover").animate({volume: 1}, 150);
+      $("#my_audio").animate({volume: 0.1}, 150);
+      $(this).animate({opacity: .3}, 150);
+    }, function() {
+        $("#beep__hover").animate({volume: 0}, 250);
+        $("#my_audio").animate({volume: 0.4}, 150);
+        $(this).animate({opacity: 1}, 150);
+    });
+  
+    $('#showcase').click(function() {
+      $("#beep__active").delay(50).get(0).play();
+    });
+});
+</script>  
+
+  </body>
+</html>
