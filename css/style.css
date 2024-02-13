@@ -50,10 +50,15 @@ iframe {
   padding: 0;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
+/* Media Queries for Mobile Phones */
+@media only screen and (max-width: 768px) {
   header {
     font-size: 24px; /* Adjusted font size for smaller screens */
+  }
+
+  #showcase {
+    height: auto; /* Reset height for better display on mobile */
+    padding: 20px; /* Add padding for better spacing on mobile */
   }
 
   #showcase h3 {
